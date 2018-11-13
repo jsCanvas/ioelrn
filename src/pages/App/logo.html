@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+  <link rel="shortcut icon" href="/img/logo.png">
+  <link rel="stylesheet" href="/css/App/App.css">
+  <link rel="stylesheet" href="/css/antd.min.css">
+  <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  <title>涛博</title>
+  <style>
+    #loginIn {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      background: #fff;
+    }
+
+    #loginIn.ok {
+      background: transparent;
+    }
+
+    #loginIn p {
+      position: relative;
+      color: rgb(108, 250, 219);
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      margin: auto;
+      z-index: 9999;
+      line-height: 20rem;
+      font-size: 3rem;
+      /* animation: ttmask 5s linear forwards; */
+    }
+
+    #loginIn p.one {
+      color: rgb(0, 255, 21);
+    }
+
+    #loginIn p.two {
+      color: rgb(174, 0, 255);
+    }
+
+    #loginIn p.tri {
+      color: orangered;
+    }
+
+    #loginIn p.fou {
+      color: red;
+    }
+
+    #loginIn p:before {
+      content: attr(text);
+      position: absolute;
+      z-index: 99999;
+      color: yellow;
+      -webkit-mask: linear-gradient(to left, red, transparent);
+    }
+
+    @keyframes mask {
+      0% {
+        -webkit-mask-position: 0px 0px;
+      }
+      25% {
+        -webkit-mask-position: 619px 0px;
+      }
+      50% {
+        -webkit-mask-position: 0px 0px;
+      }
+      75% {
+        -webkit-mask-position: 308px 0px;
+        -webkit-mask-size: 100%;
+      }
+      100% {
+        -webkit-mask-size: 1000%;
+      }
+    }
+
+    .mask {
+      position: fixed;
+      margin: auto;
+      z-index: 9998;
+      width: 100%;
+      height: 100%;
+      background: wheat url("/img/black.jpeg");
+      -webkit-mask-image: url("/img/mask.png");
+      animation: mask 5s linear forwards;
+    }
+  </style>
+
+</head>
+
+<body onload="onloginin()">
+  <div style="display: none">
+    <img src="/img/logo.png" alt="">
+  </div>
+  <div id="loginIn" class="">
+    <div class="mask"></div>
+    <p id="lot" text="0.00">0.00</p>
+  </div>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root">
+  </div>
+  <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script>
+    var loginin = document.getElementById('loginIn');
+    var logt = document.getElementById('lot');
+    var isok = false;
+    var logint = setInterval(function () {
+      var num = logt.innerHTML * 1;
+      num += 1.21;
+      switch (true) {
+        case num >= 20 && num < 50:
+          logt.className = "one";
+          break;
+        case num >= 50 && num < 70:
+          logt.className = "two";
+          break;
+        case num >= 70 && num < 80:
+          logt.className = "tri";
+          break;
+        case num >= 80:
+          logt.className = "fou";
+          break;
+      }
+      if (num >= 93) {
+          num = 95.66;
+        if (isok) {
+          num = 100;
+          clearInterval(logint);
+          loginin.className = "ok";
+          setTimeout(function () {
+            document.body.removeChild(loginin);
+          }, 1000);
+        }
+      }
+      logt.innerHTML = num.toFixed(2);
+      logt.setAttribute('text', num.toFixed(2));
+    }, 40);
+
+    function onloginin() {
+      isok = true;
+    }
+  </script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="/js/App/logo.min.js"></script>
+</body>
+
+</html>

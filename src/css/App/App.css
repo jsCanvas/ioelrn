@@ -1,0 +1,244 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+.snow-demo-wrapper {
+  background: #DFEAFF;
+  overflow: hidden;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.snow-demo {
+  width: 300px;
+  height: 90%;
+  margin: auto;
+  position: relative;
+  background-image: url(https://gw.alipayobjects.com/zos/rmsportal/dNpuKMDHFEpMGrTxdLVR.jpg);
+  background-position: top;
+  background-size: 100% auto;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.15);
+}
+.ant-layout-sider-zero-width-trigger{
+  z-index: 10000;
+}
+#root {
+  height: 100%;
+}
+.ant-layout  {
+  height: 100%!important;
+}
+.snow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+
+.snowChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.snowRotate {
+  transform-origin: center center;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.logo-gather-demo-edit-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #f1f1f1;
+  padding: 0 5%;
+  line-height: 45px;
+}
+
+.logo-gather-demo-edit-wrapper ul {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.logo-gather-demo-edit-wrapper ul li:first-child {
+  margin-left: 0;
+}
+
+.logo-gather-demo-edit-wrapper ul li {
+  float: left;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+.logo-gather-demo-wrapper {
+  position: relative;
+  background: #019BF0;
+  overflow: hidden;
+  height: 500px;
+}
+
+.logo-gather-demo-wrapper .point-wrapper {
+  position: absolute;
+}
+
+.logo-gather-demo-wrapper .point {
+  border-radius: 100%;
+}
+
+.logo-gather-demo-wrapper .right-side {
+  width: 300px;
+  height: 360px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.logo-gather-demo-wrapper .right-side * {
+  pointer-events: none;
+}
+
+@media screen and (max-width: 414px) {
+  .exhibition-details-demo {
+    overflow: hidden;
+  }
+
+  .logo-gather-demo-edit-wrapper {
+    transform: translateY(100%);
+    transition: transform .45s ease-in-out;
+  }
+
+  .logo-gather-demo-edit-wrapper.open{
+    transform: translateY(0);
+  }
+
+  .logo-gather-demo-edit-wrapper .anticon-down{
+    transition: transform .45s ease-in-out;
+  }
+
+  .logo-gather-demo-edit-wrapper.open .anticon-down{
+    transform: rotate(180deg);
+  }
+
+  .logo-gather-demo-edit-wrapper > div {
+    width: 90%;
+    line-height: 24px !important;
+    margin-bottom: 5px;
+  }
+
+  .exhibition-details-demo .edit-button{
+    position: absolute;
+    top: -20px;
+    width: 30px;
+    height: 20px;
+    border-radius: 30px 30px 0 0;
+    background: #f1f1f1;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.15);
+  }
+
+  .logo-gather-demo-edit-wrapper ul {
+    margin: 5px auto;
+  }
+
+  .phone-float-none {
+    clear: both;
+    margin-left: 0 !important;
+  }
+
+  .none {
+    display: none;
+  }
+
+}
+
+
+.loginBox{
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 137px;
+}
+
+.loginBox input{
+  border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
+}
+.loginBoxUser{
+  margin-bottom: 20px;
+}
+.loginBoxPass{
+  margin-bottom: 20px;
+}
+.loginBoxButton button{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 300px;
+  height: 40px;
+  padding-left: 20px;
+  background: #8080ed;
+  color: #fff;
+  cursor: pointer;
+}
+
+.uploadBox{
+  
+}

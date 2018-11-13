@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="./img/logo.png">
+    <link rel="stylesheet" href="./css/App/App.css">
+    <link rel="stylesheet" href="./css/antd.min.css">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>涛博</title>
+    <script crossorigin src="./js/react/react.min.js"></script>
+    <!-- <script crossorigin src="./js/react/react-dom.js"></script> -->
+    <script crossorigin src="./js/react/react-dom.production.min.js"></script>
+    <script crossorigin src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g2-3.2.0-beta.6/dist/g2.min.js"></script>
+    <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.data-set-0.8.9/dist/data-set.min.js"></script>
+    <script src="https://a.alipayobjects.com/g/datavis/china-geojson/1.0.0/index.js"></script>
+</head>
+
+<body>
+        <div style="display: none">
+          <img src="./img/logo.png" alt="">
+        </div>
+    <noscript>
+        You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root">
+    </div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <script>
+        try{
+            var ipcRenderer = require('electron').ipcRenderer;
+            var remote = require('electron').remote;
+        // import { ipcRenderer, remote } from 'electron';
+        const { Menu, MenuItem, dialog } = remote;
+
+        window.ipcRenderer = ipcRenderer;
+        }catch(e){}
+    </script>
+    <script src="./js/user/set.min.js"></script>
+    <script>
+        // var _DataSet = DataSet,
+        //   DataView = _DataSet.DataView;
+        
+        // var data = [{
+        //   item: 'Design',
+        //   a: 70,
+        //   b: 30
+        // }, {
+        //   item: 'Development',
+        //   a: 60,
+        //   b: 70
+        // }, {
+        //   item: 'Marketing',
+        //   a: 50,
+        //   b: 60
+        // }, {
+        //   item: 'Users',
+        //   a: 40,
+        //   b: 50
+        // }, {
+        //   item: 'Test',
+        //   a: 60,
+        //   b: 70
+        // }, {
+        //   item: 'Language',
+        //   a: 70,
+        //   b: 50
+        // }, {
+        //   item: 'Technology',
+        //   a: 50,
+        //   b: 40
+        // }, {
+        //   item: 'Support',
+        //   a: 30,
+        //   b: 40
+        // }, {
+        //   item: 'Sales',
+        //   a: 60,
+        //   b: 40
+        // }, {
+        //   item: 'UX',
+        //   a: 50,
+        //   b: 60
+        // }];
+        // var dv = new DataView().source(data);
+        // dv.transform({
+        //   type: 'fold',
+        //   fields: ['a', 'b'], // 展开字段集
+        //   key: 'user', // key字段
+        //   value: 'score' // value字段
+        // });
+        // var chart = new G2.Chart({
+        //   container: 'mountNode',
+        //   forceFit: true,
+        //   height: window.innerHeight,
+        //   padding: [20, 20, 95, 20]
+        // });
+        // chart.source(dv, {
+        //   score: {
+        //     min: 0,
+        //     max: 80
+        //   }
+        // });
+        // chart.coord('polar', {
+        //   radius: 0.8
+        // });
+        // chart.axis('item', {
+        //   line: null,
+        //   tickLine: null,
+        //   grid: {
+        //     lineStyle: {
+        //       lineDash: null
+        //     },
+        //     hideFirstLine: false
+        //   }
+        // });
+        // chart.axis('score', {
+        //   line: null,
+        //   tickLine: null,
+        //   grid: {
+        //     type: 'polygon',
+        //     lineStyle: {
+        //       lineDash: null
+        //     },
+        //     alternateColor: 'rgba(0, 0, 0, 0.04)'
+        //   }
+        // });
+        // chart.legend('user', {
+        //   marker: 'circle',
+        //   offset: 30
+        // });
+        // chart.line().position('item*score').color('user').size(2);
+        // chart.point().position('item*score').color('user').shape('circle').size(4).style({
+        //   stroke: '#fff',
+        //   lineWidth: 1,
+        //   fillOpacity: 1
+        // });
+        // chart.render();
+        </script>
+
+
+
+
+
+</body>
+
+</html>
